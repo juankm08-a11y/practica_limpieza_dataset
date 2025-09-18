@@ -6,7 +6,7 @@ spark = SparkSession.builder \
     .master("local[*]") \
     .getOrCreate()
 
-df = spark.read.csv("out/online_retail_limpio", header=True, inferSchema=True)
+df = spark.read.csv("online_retail_sample.csv", header=True, inferSchema=True)
 
 print("--- Datos para ETL ---")
 df.show(10, truncate=False)
